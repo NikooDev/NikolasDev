@@ -1,0 +1,26 @@
+// Root variables
+:root {
+	--background: #f8f8f8;
+	--header: #fff;
+	--theme-dark: #383838;
+	--theme-light: #fff;
+	--theme-primary: #4163c7;
+	--theme-menu-hover: #383838;
+	--theme-border: #e2e8f0;
+	--theme-gradient: var(--theme-primary);
+	--font-family: system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+	--transition-bg: background-color .3s cubic-bezier(0.65, 0, 0.35, 1), background .3s cubic-bezier(0.65, 0, 0.35, 1);
+	--transition-color: color .2s linear;
+}
+
+// Darkmode variables
+.nd-d7a0rkM {
+	--background: #0f1113;
+	--header: #0f1113;
+	--theme-dark: #e2e8f0;
+	--theme-light: #212529;
+	--theme-primary: #e2e8f0;
+	--theme-menu-hover: #6a89ec;
+	--theme-border: #597de6;
+	--theme-gradient: var(--theme-light);
+}

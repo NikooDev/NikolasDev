@@ -1,0 +1,23 @@
+/*.noscript {
+	animation: slideIn .5s ease-in-out both;
+	background-color: #e76363;
+	border-radius: 30px;
+	width: 40%;
+	margin: 4.75rem auto 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+}
+
+@keyframes slideIn {
+	from {
+		opacity: 0;
+		transform: translateY(-100%);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}*/

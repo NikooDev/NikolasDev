@@ -1,0 +1,114 @@
+@import "../../assets/mixins";
+
+.skills {
+	&__2of12 {
+		width: 16.666667%;
+	}
+	&__5of12 {
+		width: 41.666667%;
+	}
+	&__6of12 {
+		width: 50%;
+	}
+	&__7of12 {
+		width: 58.333333%;
+	}
+	&__12of12 {
+		width: 100%;
+	}
+	& .mtm1 {
+		margin-top: -1rem;
+	}
+	& .mtm4 {
+		margin-top: -4rem;
+	}
+	& .h3 {
+		height: 3rem;
+	}
+	& .h9 {
+		height: 9rem;
+	}
+	&__title {
+		font-size: 1.1rem;
+	}
+	&__line {
+		@include tabletMobile {
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+	}
+	&__img {
+		box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+		padding: .8rem;
+		@include mobile {
+			padding: .6rem;
+		}
+		&.height {
+			height: 5rem;
+			@include tabletMobile {
+				height: 4rem;
+			}
+			@include mobile {
+				height: 3.125rem;
+			}
+		}
+		&.width {
+			width: 5rem;
+			@include tabletMobile {
+				width: 4rem;
+			}
+			@include mobile {
+				width: 3.125rem;
+			}
+		}
+	}
+	&__img + h3 {
+		font-size: .9rem;
+		@include tabletMobile {
+			font-size: .7rem;
+		}
+	}
+	&__point {
+		background-color: var(--background);
+		height: 1.875rem;
+		width: 1.875rem;
+		transition: var(--transition-bg);
+		& div {
+			background-color: #597de6;
+			height: .75rem;
+			width: .75rem;
+		}
+	}
+	&__divider {
+		&.h100 {
+			height: 100%;
+		}
+		&.h60 {
+			height: 60%;
+		}
+		&.right, &.top {
+			transition: border .2s linear;
+		}
+		&.right {
+			border-right: 1px solid #c9cdd8;
+			width: 1px;
+		}
+		&.top {
+			background: none;
+			border-top: 1px solid #c9cdd8;
+		}
+		&.lg {
+			@include tabletMobile {
+				height: 15rem;
+				margin-top: -10rem;
+			}
+		}
+	}
+}
+:global(.nd-d7a0rkM) .skills {
+	&__divider {
+		&.right, &.top {
+			border-color: #45515c;
+		}
+	}
+}

@@ -1,0 +1,178 @@
+@import "../../assets/mixins";
+
+.intro {
+	@include mobile {
+		overflow: hidden;
+	}
+	&__container {
+		height: 100vh;
+		@include laptop {
+			flex-direction: column;
+			justify-content: center;
+			margin-top: 5rem;
+		}
+		@include tablet {
+			height: auto;
+			margin-top: 3rem;
+		}
+		@include mobile {
+			margin-top: 0;
+		}
+	}
+	&__rect {
+		width: 40%;
+		@include laptop {
+			width: 32%;
+			top: 17rem;
+			height: 100%;
+		}
+		@include tablet {
+			top: 11rem;
+		}
+		@include mobile {
+			top: 34rem;
+			width: 65%;
+		}
+	}
+	&__row {
+		line-height: 1.3;
+		width: 50%;
+		@include laptop {
+			width: 100%;
+		}
+		@include mobile {
+			justify-content: center;
+			height: calc(100vh - 6rem);
+		}
+	}
+	&__logo {
+		margin: 0 auto 3rem;
+	}
+	&__title {
+		font-size: 4rem;
+		letter-spacing: .1rem;
+		@include mobile {
+			font-size: 3rem;
+		}
+	}
+	&__subtitle {
+		height: 1.5rem;
+		& span:first-child {
+			font-size: 1.2rem;
+			text-transform: uppercase;
+		}
+		&__flashes {
+			font-size: 1.7rem;
+			margin-top: -.6rem;
+			animation: flashe 1.2s infinite;
+		}
+	}
+	@-moz-document url-prefix() {
+		&__subtitle {
+			left: 7.35rem;
+		}
+	}
+	&__link {
+		background-color: #4961db;
+		background-image: linear-gradient(90deg, #6a98ef, #4961db);
+		padding: 0.75rem 1.5rem;
+		color: #fff;
+		transition: background-color .15s ease-in-out;
+		&:hover {
+			background-color: #3244a2;
+			background-image: linear-gradient(90deg, #6a98ef, transparent);
+		}
+		&__icon {
+			margin-top: .1rem;
+		}
+	}
+	&__social {
+		& a {
+			color: var(--theme-primary);
+			transition: var(--transition-color);
+			&:hover {
+				color: var(--theme-menu-hover);
+			}
+		}
+	}
+	&__card {
+		padding: 1rem 1.5rem;
+		box-shadow: 0 2px 10px rgb(0 0 0 / 5%);
+		@include tablet {
+			margin-bottom: 6rem;
+		}
+		@include mobile {
+			border-radius: 0;
+			width: 100vw;
+			padding: 1rem 0 1rem 1.5rem;
+		}
+		& pre {
+			font-family: "Montserrat", var(--font-family);
+			font-size: .9rem;
+			font-weight: 500;
+			color: var(--theme-dark);
+			line-height: 2;
+			transition: var(--transition-color);
+			@include mobile {
+				font-size: .8rem;
+			}
+			& span {
+				font-weight: 700;
+			}
+			& strong {
+				color: #4063c6;
+				transition: var(--transition-color);
+				:global(.nd-d7a0rkM) & {
+					color: #6898ef;
+				}
+			}
+		}
+	}
+	&__stack {
+		margin-top: -2.75rem;
+		margin-bottom: -1.5rem;
+		position: relative;
+		@include mobile {
+			flex-wrap: wrap;
+			padding-bottom: 2rem;
+		}
+		&:after {
+			content: "";
+			border-bottom: 3px dotted var(--theme-menu-hover);
+			width: 75%;
+			top: 50%;
+			position: absolute;
+			z-index: -1;
+			transition: border-bottom .2s linear;
+			@include mobile {
+				display: none;
+			}
+		}
+		&__link {
+			height: 7.5rem;
+			width: 7.5rem;
+			box-shadow: 0 2px 10px rgba(0, 0, 0, .05);
+			transition: transform .2s ease-in-out, var(--transition-bg);
+			@include tabletMobile {
+				height: 6rem;
+				width: 6rem;
+				font-size: .8rem;
+			}
+			@include mobile {
+				margin-bottom: 1.2rem;
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+			&:hover {
+				transform: scale(1.1);
+			}
+		}
+	}
+}
+
+@keyframes flashe {
+	0%   {opacity: 1;}
+	40%  {opacity: 0;}
+	100% {opacity: 1;}
+}

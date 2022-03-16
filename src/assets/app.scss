@@ -1,0 +1,25 @@
+/**
+APP.SCSS
+ */
+
+@import "reset";
+@import "root";
+
+html {
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-size-adjust: 100%;
+	overscroll-behavior-y: none;
+}
+body {
+	background-color: var(--background);
+	font-family: var(--font-family);
+	color: var(--theme-dark);
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.5;
+	overflow-y: scroll;
+}
+.simplebar-scrollbar.simplebar-visible:before {
+	background-color: var(--theme-dark);
+}

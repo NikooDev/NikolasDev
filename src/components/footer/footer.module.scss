@@ -1,0 +1,132 @@
+@import "../../assets/mixins";
+
+.footer {
+	background: linear-gradient(90deg, #6a98ef, #4961db);
+	@include tablet {
+		margin-bottom: 4.15rem;
+	}
+	&__container {
+		@include mobile {
+			padding: 1rem 0;
+		}
+	}
+	&__logo {
+		-webkit-filter: brightness(5);
+		filter: brightness(5);
+		@include tablet {
+			display: none;
+		}
+	}
+	&__list {
+		width: 100%;
+		font-size: .9rem;
+		@include tablet {
+			justify-content: space-around;
+		}
+		& li {
+			color: #fff;
+		}
+		& li:first-child {
+			margin: .3rem 0 0 1rem;
+			@include mobile {
+				margin: 0;
+			}
+		}
+		& li:last-child {
+			& a:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+	&__social {
+		@include tablet {
+			width: 100%;
+			justify-content: space-evenly;
+			margin-bottom: .5rem;
+		}
+		& a {
+			color: #fff;
+			transition: var(--transition-color);
+			&:hover {
+				color: #35469f;
+			}
+		}
+	}
+	&__modal {
+		height: 100%;
+		width: 100%;
+		overflow-x: hidden;
+		overflow-y: scroll;
+		&__scrollHeight {
+			max-height: 22rem;
+		}
+		&__in {
+			animation: fadeIn .3s cubic-bezier(0.65, 0, 0.35, 1) .15s both;
+		}
+		&__out {
+			animation: fadeOut .3s cubic-bezier(0.65, 0, 0.35, 1) both;
+		}
+		&__open {
+			overflow: hidden;
+			padding-right: 15px;
+		}
+		&__dark {
+			background-color: #000;
+		}
+		&__modalOpen {
+			width: 100vw;
+			height: 100vh;
+			transition: background-color .3s cubic-bezier(0.65, 0, 0.35, 1), opacity .4s cubic-bezier(0.65, 0, 0.35, 1);
+		}
+		&__dialog {
+			margin: 0 auto;
+			max-width: 50%;
+			height: 100%;
+		}
+		&__content {
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+			pointer-events: auto;
+			background-color: var(--theme-light);
+			box-shadow: 0 0 15px rgba(0, 0, 0, .2);
+			border-radius: 15px;
+			outline: 0;
+			min-height: 23rem;
+		}
+		&__header {
+			& a svg {
+				transition: fill .2s ease-in-out;
+			}
+			& a:hover svg {
+				fill: #597de6;
+			}
+		}
+		&__body {
+			min-height: 22rem;
+		}
+	}
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translateY(-1.5rem);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes fadeOut {
+	from {
+		opacity: 1;
+		transform: translateY(0);
+	}
+	to {
+		opacity: 0;
+		transform: translateY(1.5rem);
+	}
+}

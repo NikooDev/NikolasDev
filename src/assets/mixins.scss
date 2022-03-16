@@ -1,0 +1,48 @@
+/**
+MIXINS.SCSS
+ */
+
+@mixin laptop {
+	@media (max-width: 992px) {
+		@content
+	}
+}
+@mixin tablet {
+	@media (max-width: 768px) {
+		@content
+	}
+}
+@mixin tabletMobile {
+	@media (max-width: 680px) {
+		@content
+	}
+}
+@mixin mobile {
+	@media (max-width: 500px) {
+		@content
+	}
+}
+
+@mixin margins($margin, $value){
+	@if( $margin == 't' ) {
+		margin-top: $value;
+	} @else if( $margin == 'l' ) {
+		margin-left: $value;
+	} @else if( $margin == 'b' ) {
+		margin-bottom: $value;
+	} @else if( $margin == 'r' ) {
+		margin-right: $value;
+	}
+}
+
+@mixin paddings($padding, $value){
+	@if( $padding == 't' ) {
+		padding-top: $value;
+	} @else if( $padding == 'l' ) {
+		padding-left: $value;
+	} @else if( $padding == 'b' ) {
+		padding-bottom: $value;
+	} @else if( $padding == 'r' ) {
+		padding-right: $value;
+	}
+}

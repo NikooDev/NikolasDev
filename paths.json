@@ -1,0 +1,20 @@
+{
+	"compilerOptions": {
+		"paths": {
+			"@Actions/*": ["./src/actions/*"],
+			"@Assets/*": ["./src/assets/*"],
+			"@Class/*": ["./src/class/*"],
+			"@Components/*": ["./src/components/*"],
+			"@Icons/*": ["./src/components/icons/*"],
+			"@Icons": ["./src/components/icons/index.ts"],
+			"@Layout/*": ["./src/components/layout/*"],
+			"@Config/*": ["./src/config/*"],
+			"@Contexts/*": ["./src/contexts/*"],
+			"@Helpers/*": ["./src/helpers/*"],
+			"@Hooks/*": ["./src/hooks/*"],
+			"@Reducers/*": ["./src/reducers/*"],
+			"@Services/*": ["./src/services/*"],
+			"@Types/*": ["./src/types/*"]
+		}
+	}
+}

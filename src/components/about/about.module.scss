@@ -1,0 +1,70 @@
+@import "../../assets/mixins";
+
+.about {
+	background: linear-gradient(90deg, #6a98ef, #4961db);
+	margin: 5rem 0 0;
+	&__tablet {
+		@include tablet {
+			flex-direction: column;
+		}
+	}
+	&__avatar {
+		background-color: #fff;
+		border: 5px solid #fff;
+		object-fit: contain;
+		filter: grayscale(100%) contrast(140%);
+		@include tablet {
+			margin: 0 0 2rem 0;
+		}
+	}
+	&__aboutme {
+		width: 70%;
+		line-height: 1.6;
+		@include tablet {
+			width: 100%;
+			text-align: justify;
+		}
+		& p {
+			color: #fff;
+		}
+	}
+}
+.objective {
+	box-shadow: 0 0 10px rgba(0, 0, 0, .05);
+	@include laptop {
+		margin-bottom: 2rem;
+		margin-top: 2rem;
+	}
+	@include mobile {
+		padding: 1rem;
+	}
+	& p {
+		font-size: 1.3rem;
+		font-style: italic;
+		@include laptop {
+			font-size: 1.1rem;
+		}
+		@include mobile {
+			font-size: .9rem;
+			font-weight: 500;
+		}
+	}
+	& div {
+		box-shadow: -3px -3px 10px rgba(0, 0, 0, .05);
+		margin: -1.5rem;
+		padding: 1rem;
+		border-radius: 58px;
+		height: 5rem;
+		width: 5rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		@include laptop {
+			display: none;
+		}
+	}
+	& .quotes {
+		fill: var(--theme-dark);
+		transition: fill .2s linear;
+	}
+}

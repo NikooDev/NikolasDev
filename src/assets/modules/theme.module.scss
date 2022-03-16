@@ -1,0 +1,23 @@
+.light {
+	background-color: var(--theme-light);
+	transition: var(--transition-bg);
+}
+.fontMontserrat {
+	font-family: "Montserrat", var(--font-family);
+}
+.transition {
+	transition: var(--transition-bg), var(--transition-color);
+}
+.title {
+	transition: var(--transition-color);
+}
+.colorTitle {
+	color: var(--theme-menu-hover);
+}
+.lightTitle {
+	color: #fff;
+}
+
+.mxAuto {
+	margin: 0 auto;
+}
