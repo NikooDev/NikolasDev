@@ -30,7 +30,7 @@ const Intro = () => {
 			<div className={Class(g.dFlex, g.aiCenter, g.jcSpaceAround, i.intro__container)}>
 					<div className={Class(g.dFlex, g.fdColumn, g.mb5, i.intro__row)}>
 						<img src="/static/logo.svg" height="90" width="132.38" alt="logo" className={Class(i.intro__logo)} />
-						<h1 className={Class(g.fwe900, g.taCenter, i.intro__title)}>NIKOLASDEV</h1>
+						<h1 className={Class(g.fwe900, g.taCenter, i.intro__title)}>NikolasDev</h1>
 						<div className={Class(g.dFlex, g.jcCenter, g.w100, g.pRelative, i.intro__subtitle)}>
 							<span ref={wordsRef} className={g.fwe600} data-words='["Étudiant en alternance", "Autodidacte", "Développeur web Full-Stack", "Front-end React / Next.js", "Back-end Node.js"]' />
 							<span className={i.intro__subtitle__flashes}>|</span>
