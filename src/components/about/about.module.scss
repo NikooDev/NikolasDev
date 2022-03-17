@@ -22,10 +22,23 @@
 		line-height: 1.6;
 		@include tablet {
 			width: 100%;
-			text-align: center;
 		}
 		& p {
 			color: #fff;
+			position: relative;
+			@include tablet {
+				margin-left: 1rem;
+				&:before {
+					content: "";
+					background-color: #fff;
+					border-radius: 30px;
+					height: 100%;
+					width: 4px;
+					display: flex;
+					position: absolute;
+					left: -1rem;
+				}
+			}
 		}
 	}
 }
