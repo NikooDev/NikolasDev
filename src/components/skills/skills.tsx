@@ -71,13 +71,13 @@ const Skills = () => {
 								<img src="/static/skills/react.svg" className={Class(g.brtl15, g.brtr15, g.brbl15, g.brbr15, t.light, s.skills__img, s.width, s.height)} height={80} width={80} alt="" />
 								<h3 className={g.mt1}>REACT.JS</h3>
 							</div>
-							<div className={Class(g.dInherit, g.fdColumn, g.aiCenter, s.skills__6of12)}>
-								<img src="/static/skills/typescript.svg" className={Class(g.brtl15, g.brtr15, g.brbl15, g.brbr15, t.light, s.skills__img, s.width, s.height)} height={80} width={80} alt="" />
-								<h3 className={g.mt1}>TYPESCRIPT</h3>
-							</div>
 							<div className={Class(g.pRelative, g.dInherit, g.fdColumn, g.aiCenter, s.skills__6of12)}>
 								<img src="/static/skills/redux.svg" className={Class(g.brtl15, g.brtr15, g.brbl15, g.brbr15, t.light, s.skills__img, s.width, s.height)} height={80} width={80} alt="" />
 								<h3 className={Class(g.mt1, g.taCenter)}>REDUX</h3>
+							</div>
+							<div className={Class(g.dInherit, g.fdColumn, g.aiCenter, s.skills__6of12)}>
+								<img src="/static/skills/typescript.svg" className={Class(g.brtl15, g.brtr15, g.brbl15, g.brbr15, t.light, s.skills__img, s.width, s.height)} height={80} width={80} alt="" />
+								<h3 className={g.mt1}>TYPESCRIPT</h3>
 							</div>
 						</div>
 					</div>
