@@ -32,7 +32,7 @@
 		font-size: 1.1rem;
 	}
 	&__line {
-		@include tabletMobile {
+		@include laptop {
 			flex-wrap: wrap;
 			justify-content: center;
 		}
@@ -98,7 +98,7 @@
 			border-top: 1px solid #c9cdd8;
 		}
 		&.lg {
-			@include tabletMobile {
+			@include laptop {
 				height: 15rem;
 				margin-top: -10rem;
 			}
