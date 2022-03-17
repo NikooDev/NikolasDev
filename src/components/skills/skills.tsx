@@ -114,12 +114,12 @@ const Skills = () => {
 						<h2 className={Class(g.mb6, g.fwe600, g.taCenter, t.fontMontserrat, s.skills__title, s.mtm1)}>Outils & langages divers</h2>
 						<div className={Class(g.dFlex, g.jcSpaceBetween, g.mb5)}>
 							<div className={Class(g.dInherit, g.fdColumn, g.aiCenter, s.skills__6of12)}>
-								<img src="/static/skills/sass.svg" className={Class(g.brtl15, g.brtr15, g.brbl15, g.brbr15, t.light, s.skills__img, s.width, s.height)} height={80} width={80} alt="" />
-								<h3 className={g.mt1}>SASS</h3>
-							</div>
-							<div className={Class(g.dInherit, g.fdColumn, g.aiCenter, s.skills__6of12)}>
 								<img src="/static/skills/typescript.svg" className={Class(g.brtl15, g.brtr15, g.brbl15, g.brbr15, t.light, s.skills__img, s.width, s.height)} height={80} width={80} alt="" />
 								<h3 className={g.mt1}>TYPESCRIPT</h3>
+							</div>
+							<div className={Class(g.dInherit, g.fdColumn, g.aiCenter, s.skills__6of12)}>
+								<img src="/static/skills/sass.svg" className={Class(g.brtl15, g.brtr15, g.brbl15, g.brbr15, t.light, s.skills__img, s.width, s.height)} height={80} width={80} alt="" />
+								<h3 className={g.mt1}>SASS</h3>
 							</div>
 							<div className={Class(g.dInherit, g.fdColumn, g.aiCenter, s.skills__6of12)}>
 								<img src="/static/skills/webstorm.svg" className={Class(g.brtl15, g.brtr15, g.brbl15, g.brbr15, t.light, s.skills__img, s.width, s.height)} height={80} width={80} alt="" />
