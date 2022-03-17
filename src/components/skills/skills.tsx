@@ -112,7 +112,7 @@ const Skills = () => {
 				<div className={Class(g.dFlex, g.mb2)}>
 					<div className={Class(s.skills__9of12, t.mxAuto)}>
 						<h2 className={Class(g.mb6, g.fwe600, g.taCenter, t.fontMontserrat, s.skills__title, s.mtm1)}>Outils & langages divers</h2>
-						<div className={Class(g.dFlex, g.jcSpaceBetween, g.mb5, s.skills__line)}>
+						<div className={Class(g.dFlex, g.jcSpaceBetween, s.skills__line)}>
 							<div className={Class(g.dInherit, g.fdColumn, g.aiCenter, g.mb3, s.skills__6of12, s.skills__33)}>
 								<img src="/static/skills/typescript.svg" className={Class(g.brtl15, g.brtr15, g.brbl15, g.brbr15, t.light, s.skills__img, s.width, s.height)} height={80} width={80} alt="" />
 								<h3 className={g.mt1}>TYPESCRIPT</h3>
