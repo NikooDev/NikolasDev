@@ -13,8 +13,16 @@
 	&__7of12 {
 		width: 58.333333%;
 	}
+	&__9of12 {
+		width: 70%;
+	}
 	&__12of12 {
 		width: 100%;
+	}
+	&__33 {
+		@include laptop {
+			flex: 0 0 33.333333%;
+		}
 	}
 	& .mtm1 {
 		margin-top: -1rem;
