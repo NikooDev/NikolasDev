@@ -2,12 +2,10 @@ import React, { useEffect } from 'react'
 import Ilayout from '@Types/layout'
 import { useRouter } from 'next/router'
 import Head from 'next/head'
-import Dynamic from 'next/dynamic'
 import Noscript from '@Components/noscript'
 import Header from '@Components/header'
-//import Footer from '@Components/footer'
+import Footer from '@Components/footer'
 import Class from 'classnames'
-const Footer = Dynamic(() => import('@Components/footer'))
 import g from '@Assets/modules/global.module.scss'
 import m from '@Components/mentions/mentions.module.scss'
 
