@@ -7,9 +7,10 @@
 	}
 	&__back {
 		display: none;
+		color: var(--theme-dark);
 		& svg {
-			fill: var(--theme-dark);
-			transition: fill .4s linear;
+			color: var(--theme-dark);
+			transition: color .4s linear;
 		}
 		@include tablet {
 			display: flex;
