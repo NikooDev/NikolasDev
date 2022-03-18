@@ -29,10 +29,6 @@ const Guest: React.FC<Ilayout> = ({
 		})
 	}, [])
 
-	useEffect(() => {
-		window.scrollTo({top: 0})
-	}, [])
-
 	return (
 		<>
 			<Head>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import AppPropsWithLayout from '@Types/app'
 import { ThemeProvider } from '@Contexts/theme.context'
 import Head from 'next/head'
@@ -6,6 +6,8 @@ import '@Assets/app.scss'
 
 const App = ({ Component, pageProps }: AppPropsWithLayout) => {
 	const getLayout = Component.getLayout ?? ((page) => page)
+
+	useEffect(() => window.scroll({ top: 0 }), [])
 
 	// noinspection HtmlRequiredTitleElement
 	return (
