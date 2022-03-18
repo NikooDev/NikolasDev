@@ -13,7 +13,7 @@ const Footer = () => {
 
 	const handleBack = (event: React.MouseEvent) => {
 		event.preventDefault()
-		router.push('/legal').then()
+		router.push('/legal').then(() => window.scrollTo({ top: 0 }))
 	}
 
 	return (
@@ -38,7 +38,7 @@ const Footer = () => {
 								<span className={t.fontMontserrat}>NikolasDev © { new Date().getFullYear() }</span>
 							</li>
 							<li>
-								<Link href="/">
+								<Link href="/" passHref>
 									<a href="/" onClick={(event) => handleBack(event)} className={t.fontMontserrat}>Mentions légales</a>
 								</Link>
 							</li>
