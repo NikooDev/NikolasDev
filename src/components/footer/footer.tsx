@@ -30,7 +30,7 @@ const Footer = () => {
 								<span className={t.fontMontserrat}>NikolasDev © { new Date().getFullYear() }</span>
 							</li>
 							<li>
-								<Link href="/legal" passHref prefetch={false}>
+								<Link href="/legal" passHref shallow>
 									<a href="/legal" className={t.fontMontserrat}>Mentions légales</a>
 								</Link>
 							</li>
