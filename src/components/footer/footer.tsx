@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useCallback } from 'react'
 import g from '@Assets/modules/global.module.scss'
 import t from '@Assets/modules/theme.module.scss'
 import f from './footer.module.scss'
@@ -11,9 +11,11 @@ import Class from 'classnames'
 const Footer = () => {
 	const router = useRouter()
 
-	const handleBack = (event: React.MouseEvent) => {
+	const scrollTop = useCallback(() => window.scrollTo(0, 0), [])
+
+	const handleBack = (event: React.MouseEvent | React.TouchEvent) => {
 		event.preventDefault()
-		router.push('/legal').then(() => window.scrollTo({ top: 0 }))
+		router.push('/legal').then(() => scrollTop())
 	}
 
 	return (
@@ -39,7 +41,7 @@ const Footer = () => {
 							</li>
 							<li>
 								<Link href="/" passHref>
-									<a href="/" onClick={(event) => handleBack(event)} className={t.fontMontserrat}>Mentions légales</a>
+									<a href="/" onTouchStart={(event) => handleBack(event)} onClick={(event) => handleBack(event)} className={t.fontMontserrat}>Mentions légales</a>
 								</Link>
 							</li>
 						</ul>

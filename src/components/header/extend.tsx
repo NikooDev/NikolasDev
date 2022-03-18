@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useCallback } from 'react'
 import g from '@Assets/modules/global.module.scss'
 import e from './extend.module.scss'
 import { useRouter } from 'next/router'
@@ -17,10 +17,17 @@ const HeaderExtend = ({ headerRef }: Iref) => {
 	const handleTheme = useTheme(headerRef)
 	const router = useRouter()
 
+	const scrollTop = useCallback(() => window.scrollTo(0, 0), [])
+
+	const handleBack = (event: React.MouseEvent | React.TouchEvent) => {
+		event.preventDefault()
+		router.push('/').then(() => scrollTop())
+	}
+
 	return (
 		<div className={Class(g.pAbsolute, g.r0, e.button)}>
 			{ router.pathname === '/legal' ? <Link href="/" passHref>
-				<a href="/" className={Class(g.dFlex, g.jcCenter, g.aiCenter, g.pRelative, g.mb2, e.button__link)}>
+				<a href="/" onTouchStart={(event) => handleBack(event)} onClick={(event) => handleBack(event)} className={Class(g.dFlex, g.jcCenter, g.aiCenter, g.pRelative, g.mb2, e.button__link)}>
 					<LeftIcon />
 				</a>
 			</Link> : <></> }
