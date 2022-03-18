@@ -2,12 +2,20 @@ import React from 'react'
 import g from '@Assets/modules/global.module.scss'
 import t from '@Assets/modules/theme.module.scss'
 import f from './footer.module.scss'
+import { useRouter } from 'next/router'
 import { Facebook, Github, Linkedin } from '@Icons/social'
 import Link from 'next/link'
 import Container from '@Components/layouts/container'
 import Class from 'classnames'
 
 const Footer = () => {
+	const router = useRouter()
+
+	const handleBack = (event: React.MouseEvent) => {
+		event.preventDefault()
+		router.push('/').then()
+	}
+
 	return (
 		<>
 			<section className={Class(g.dFlex, f.footer)} role="contentinfo">
@@ -30,8 +38,8 @@ const Footer = () => {
 								<span className={t.fontMontserrat}>NikolasDev © { new Date().getFullYear() }</span>
 							</li>
 							<li>
-								<Link href="/legal" passHref>
-									<a href="/legal" className={t.fontMontserrat}>Mentions légales</a>
+								<Link href="/">
+									<a href="/" onClick={(event) => handleBack(event)} className={t.fontMontserrat}>Mentions légales</a>
 								</Link>
 							</li>
 						</ul>
