@@ -27,12 +27,12 @@ const HeaderExtend = ({ headerRef }: Iref) => {
 	return (
 		<div className={Class(g.pAbsolute, g.r0, e.button)}>
 			{ router.pathname === '/legal' ? <Link href="/" passHref>
-				<a href="/" onTouchStart={(event) => handleBack(event)} onClick={(event) => handleBack(event)} className={Class(g.dFlex, g.jcCenter, g.aiCenter, g.pRelative, g.mb2, e.button__link)}>
+				<a href="/" aria-label="Retour à l'accueil" onTouchStart={(event) => handleBack(event)} onClick={(event) => handleBack(event)} className={Class(g.dFlex, g.jcCenter, g.aiCenter, g.pRelative, g.mb2, e.button__link)}>
 					<LeftIcon />
 				</a>
 			</Link> : <></> }
 			<Link href="/">
-				<a href="/" className={Class(g.dFlex, g.jcCenter, g.aiCenter, g.pRelative, e.button__link)}
+				<a href="/" aria-label="Mode sombre" className={Class(g.dFlex, g.jcCenter, g.aiCenter, g.pRelative, e.button__link)}
 					 onClick={(event) => handleTheme(event)}>
 					<Dark fill="#fff" classname={Class(g.pAbsolute, e.button__link__dark)} />
 					<Light fill="#fff" classname={Class(g.pAbsolute, e.button__link__light)} />
