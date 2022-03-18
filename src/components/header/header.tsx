@@ -1,6 +1,7 @@
 import React, { useRef } from 'react'
 import g from '@Assets/modules/global.module.scss'
 import h from './header.module.scss'
+import { useRouter } from 'next/router'
 import { Dark, Light } from '@Icons/darkmode'
 import { AboutIcon, ContactIcon, SkillsIcon, TrainingIcon } from '@Icons/mobile'
 import Class from 'classnames'
@@ -11,6 +12,7 @@ import useTheme from '@Hooks/useTheme'
 import useAnchors from '@Hooks/useAnchors'
 import useResponsive from '@Hooks/useResponsive'
 import HeaderExtend from '@Components/header/extend'
+import LeftIcon from '@Icons/arrow'
 
 const Header = () => {
 	const headerRef = useRef<HTMLDivElement>() as React.MutableRefObject<HTMLDivElement>
@@ -18,6 +20,7 @@ const Header = () => {
 	const handleAnchor = useAnchors()
 	const isMobile = useResponsive()
 	const clFixed = Class(g.pFixed, g.t0, g.l0, g.r0)
+	const router = useRouter()
 
 	return (
 		<header className={Class(clFixed, g.zi50, h.header)} id="header" role="banner">
@@ -27,8 +30,8 @@ const Header = () => {
 						<Link href="/" passHref>
 							<a href="/" data-anchor="intro"
 								 onClick={(event) => handleAnchor(event)}
-								 className={Class(g.dFlex, g.aiCenter, h.header__item__link__hidden_md)} aria-label="logo" role="link">
-								<img src="/static/logo.svg" height="35" width="51.48" alt="logo" />
+								 className={Class(g.dFlex, g.aiCenter, h.header__item__link__hidden_md, h.header__logo)} aria-label="logo" role="link">
+								{ router.pathname === '/legal' ? <LeftIcon /> : <img src="/static/logo.svg" height="35" width="51.48" alt="logo" /> }
 							</a>
 						</Link>
 						<ul className={Class(g.dFlex, g.aiCenter, g.pRelative, h.header__items)}>

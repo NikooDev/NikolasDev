@@ -1,8 +1,8 @@
 import React from 'react'
 import AppPropsWithLayout from '@Types/app'
+import { ThemeProvider } from '@Contexts/theme.context'
 import Head from 'next/head'
 import '@Assets/app.scss'
-import { ThemeProvider } from '@Contexts/theme.context'
 
 const App = ({ Component, pageProps }: AppPropsWithLayout) => {
 	const getLayout = Component.getLayout ?? ((page) => page)

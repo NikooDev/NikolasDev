@@ -1,63 +1,13 @@
-import React, { useEffect, useRef, useState } from 'react'
-import SimpleBar from 'simplebar-react'
-import Imodal from '@Types/legal'
+import React from 'react'
 import g from '@Assets/modules/global.module.scss'
 import t from '@Assets/modules/theme.module.scss'
 import f from './footer.module.scss'
 import { Facebook, Github, Linkedin } from '@Icons/social'
-import useOutside from '@Hooks/useOutside'
+import Link from 'next/link'
 import Container from '@Components/layouts/container'
 import Class from 'classnames'
-import Close from '@Icons/close'
-import 'simplebar/dist/simplebar.min.css'
-
-const ModalLegal: React.FC<Imodal> = ({ open, close, children }) => {
-	const [fadeTime, setFadeTime] = useState<boolean>(false)
-
-	useEffect(() => {
-		if(!open) return
-		let timer = setTimeout(() => setFadeTime(true), 100)
-		if(close) setTimeout(() => setFadeTime(false), 100)
-		return () => {
-			setFadeTime(false)
-			clearTimeout(timer)
-		}
-	}, [open, close])
-
-	return open ? <>{ children }<div className={Class(g.pFixed, g.t0, g.l0, g.zi90, f.footer__modal__modalOpen, fadeTime ? [g.op05, f.footer__modal__dark] : g.op0)}/></> : null
-}
 
 const Footer = () => {
-	const [open, setOpen] = useState<boolean>(false)
-	const [close, setClose] = useState<boolean>(true)
-	const modalRef = useRef<HTMLDivElement>() as React.MutableRefObject<HTMLDivElement>
-
-	const modalClose = () => {
-		setClose(true)
-		setTimeout(() => {
-			let header = document.getElementById('header') as HTMLDivElement
-			header && header.classList.remove(f.footer__modal__open)
-			document.body.classList.remove(f.footer__modal__open)
-			setOpen(false)
-		}, 400)
-	}
-
-	const handleModalOpen = (event: React.MouseEvent) => {
-		event.preventDefault()
-		let header = document.getElementById('header') as HTMLDivElement
-		header && header.classList.add(f.footer__modal__open)
-		document.body.classList.add(f.footer__modal__open)
-		setClose(false)
-		setOpen(true)
-	}
-
-	const handleModalClose = (event: React.MouseEvent) => {
-		event.preventDefault()
-		modalClose()
-	}
-
-	useOutside(modalRef, () => modalClose())
-
 	return (
 		<>
 			<section className={Class(g.dFlex, f.footer)} role="contentinfo">
@@ -79,12 +29,19 @@ const Footer = () => {
 								<img src="/static/logo.svg" height="35" width="51.48" alt="logo" className={Class(g.mr2, f.footer__logo)} />
 								<span className={t.fontMontserrat}>NikolasDev © { new Date().getFullYear() }</span>
 							</li>
-							<li><a href="#" className={t.fontMontserrat} onClick={(event) => handleModalOpen(event)}>Mentions légales</a></li>
+							<li><Link href={'/legal'}><a href={'/legal'} className={t.fontMontserrat}>Mentions légales</a></Link></li>
 						</ul>
 					</div>
 				</Container>
 			</section>
-			<ModalLegal open={open} close={close}>
+		</>
+	)
+}
+
+export default Footer
+
+/*
+<ModalLegal open={open} close={close}>
 				<div className={Class(g.pFixed, g.t0, g.l0, g.zi100, f.footer__modal)}>
 					<div className={Class(g.dFlex, g.aiCenter, g.jcCenter, f.footer__modal__dialog)}>
 						<div ref={modalRef} className={Class(g.pt3, g.pl4, g.pb4, g.pr4, t.fontMontserrat, f.footer__modal__content, open ? f.footer__modal__in : null, close ? f.footer__modal__out : null)}>
@@ -94,25 +51,19 @@ const Footer = () => {
 									<Close height={35} width={35} fill="currentColor" />
 								</a>
 							</div>
-							<SimpleBar autoHide={false} className={Class(g.mt4, f.footer__modal__scrollHeight)}>
-								<div className={Class(g.dFlex, g.fdColumn, g.mt4, f.footer__modal__body)}>
-									<h3>1. Editeur</h3>
+							<div className={Class(g.dFlex, g.fdColumn, g.mt4, f.footer__modal__body)}>
+								<h3>1. Editeur</h3>
 
-									<h3 className={g.mt2}>2. Hébergement</h3>
+								<h3 className={g.mt2}>2. Hébergement</h3>
 
-									<h3 className={g.mt2}>2. Propriété Intellectuelle</h3>
+								<h3 className={g.mt2}>2. Propriété Intellectuelle</h3>
 
-									<h3 className={g.mt2}>3. Cookies</h3>
+								<h3 className={g.mt2}>3. Cookies</h3>
 
-									<h3 className={g.mt2}>4. Données Personnelles</h3>
-								</div>
-							</SimpleBar>
+								<h3 className={g.mt2}>4. Données Personnelles</h3>
+							</div>
 						</div>
 					</div>
 				</div>
 			</ModalLegal>
-		</>
-	)
-}
-
-export default Footer
+ */
