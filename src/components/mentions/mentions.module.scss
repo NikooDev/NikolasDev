@@ -8,9 +8,9 @@
 	&__back {
 		display: none;
 		color: var(--theme-dark);
+		transition: color .4s linear;
 		& svg {
-			color: var(--theme-dark);
-			transition: color .4s linear;
+			fill: currentColor;
 		}
 		@include tablet {
 			display: flex;
