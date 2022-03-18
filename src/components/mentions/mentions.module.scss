@@ -9,7 +9,7 @@
 		display: none;
 		& svg {
 			fill: var(--theme-dark);
-			transition: fill .3s cubic-bezier(0.65, 0, 0.35, 1);
+			transition: fill .4s linear;
 		}
 		@include tablet {
 			display: flex;
