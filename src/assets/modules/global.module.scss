@@ -101,3 +101,28 @@
 		width: 100%;
 	}
 }
+
+// Rect
+.tm2 {
+	top: -2rem;
+}
+.posLegal {
+	top: -20rem!important;
+	width: 32%!important;
+}
+.rect {
+	width: 40%;
+	transition: top 1s cubic-bezier(0.65, 0, 0.35, 1);
+	@include laptop {
+		width: 32%;
+		top: 17rem;
+		height: 100%;
+	}
+	@include tablet {
+		top: 11rem;
+	}
+	@include mobile {
+		top: 34rem;
+		width: 65%;
+	}
+}

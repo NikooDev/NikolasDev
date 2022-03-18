@@ -1,5 +1,5 @@
 .button {
-	top: -5.5rem;
+	bottom: 5rem;
 	&__link {
 		background-color: #4063c6;
 		box-shadow: 0 0 5px rgba(0, 0, 0, .35);
@@ -9,6 +9,9 @@
 		height: 3.5rem;
 		width: 3.5rem;
 		& svg {
+			fill: #fff;
+		}
+		& .button__link__dark, & .button__link__light {
 			transition: transform .4s cubic-bezier(0.65, 0, 0.35, 1);
 		}
 		&__dark {

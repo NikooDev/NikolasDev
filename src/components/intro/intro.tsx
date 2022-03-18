@@ -25,7 +25,6 @@ const Intro = () => {
 
 	return (
 		<section className={i.intro} id="intro">
-			<img src="/static/rect.svg" alt="" className={Class(g.pAbsolute, g.r0, g.t6, g.zi01, i.intro__rect)}/>
 			<Container>
 			<div className={Class(g.dFlex, g.aiCenter, g.jcSpaceAround, i.intro__container)}>
 					<div className={Class(g.dFlex, g.fdColumn, g.mb5, i.intro__row)}>

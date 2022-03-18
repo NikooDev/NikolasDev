@@ -1,12 +1,9 @@
 import React from 'react'
 import Guest from '@Components/layouts/guest'
+import Mentions from '@Components/mentions'
 
 const Legal = () => {
-	return (
-		<section>
-			<h1>Mentions légales</h1>
-		</section>
-	)
+	return <Mentions />
 }
 
 Legal.getLayout = (page: React.ReactElement) => {

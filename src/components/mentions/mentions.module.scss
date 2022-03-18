@@ -1,0 +1,26 @@
+@import "../../assets/mixins";
+
+.legal {
+	margin-top: 8rem;
+	@include mobile {
+		margin-top: 1.2rem;
+	}
+	&__back {
+		& svg {
+			transition: fill .2s linear;
+			fill: var(--theme-dark);
+		}
+	}
+	&__title {
+		font-size: 1.4rem;
+		text-transform: uppercase;
+	}
+	&__card {
+		background-color: var(--theme-light);
+		box-shadow: 0 2px 10px rgba(0, 0, 0, .05);
+		min-height: 50rem;
+	}
+}
+.noTransition {
+	transition: none;
+}

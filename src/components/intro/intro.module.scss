@@ -19,21 +19,6 @@
 			margin-top: 0;
 		}
 	}
-	&__rect {
-		width: 40%;
-		@include laptop {
-			width: 32%;
-			top: 17rem;
-			height: 100%;
-		}
-		@include tablet {
-			top: 11rem;
-		}
-		@include mobile {
-			top: 34rem;
-			width: 65%;
-		}
-	}
 	&__row {
 		line-height: 1.3;
 		width: 50%;
