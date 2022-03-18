@@ -29,7 +29,11 @@ const Footer = () => {
 								<img src="/static/logo.svg" height="35" width="51.48" alt="logo" className={Class(g.mr2, f.footer__logo)} />
 								<span className={t.fontMontserrat}>NikolasDev © { new Date().getFullYear() }</span>
 							</li>
-							<li><Link href="/legal" passHref><a href="/legal" className={t.fontMontserrat}>Mentions légales</a></Link></li>
+							<li>
+								<Link href="/legal" passHref>
+									<a href="/legal" className={t.fontMontserrat}>Mentions légales</a>
+								</Link>
+							</li>
 						</ul>
 					</div>
 				</Container>

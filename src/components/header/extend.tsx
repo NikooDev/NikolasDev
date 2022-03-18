@@ -19,7 +19,7 @@ const HeaderExtend = ({ headerRef }: Iref) => {
 
 	return (
 		<div className={Class(g.pAbsolute, g.r0, e.button)}>
-			{ router.pathname === '/legal' ? <Link href="/">
+			{ router.pathname === '/legal' ? <Link href="/" passHref>
 				<a href="/" className={Class(g.dFlex, g.jcCenter, g.aiCenter, g.pRelative, g.mb2, e.button__link)}>
 					<LeftIcon />
 				</a>
