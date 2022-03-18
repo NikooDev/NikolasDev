@@ -13,7 +13,7 @@ const Footer = () => {
 
 	const handleBack = (event: React.MouseEvent) => {
 		event.preventDefault()
-		router.push('/').then()
+		router.push('/legal').then()
 	}
 
 	return (
