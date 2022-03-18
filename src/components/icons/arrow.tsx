@@ -1,8 +1,10 @@
 import React from 'react'
+import Isvg from '@Types/svg'
+import Class from 'classnames'
 
-const LeftIcon = () => {
+const LeftIcon = ({ classname }: Isvg) => {
 	return (
-		<svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="url(#gradient)" viewBox="0 0 16 16">
+		<svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" className={Class(classname)} fill="url(#gradient)" viewBox="0 0 16 16">
 			<defs xmlns="http://www.w3.org/2000/svg">
 				<linearGradient id="gradient" gradientUnits="userSpaceOnUse">
 					<stop stopColor="#6a98f0" />

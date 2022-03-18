@@ -30,8 +30,8 @@ const Header = () => {
 						<Link href="/" passHref>
 							<a href="/" data-anchor="intro"
 								 onClick={(event) => handleAnchor(event)}
-								 className={Class(g.dFlex, g.aiCenter, h.header__item__link__hidden_md, h.header__logo)} aria-label="logo" role="link">
-								{ router.pathname === '/legal' ? <LeftIcon /> : <img src="/static/logo.svg" height="35" width="51.48" alt="logo" /> }
+								 className={Class(g.dFlex, g.aiCenter, h.header__item__link__hidden_md)} aria-label="logo" role="link">
+								{ router.pathname === '/legal' ? <LeftIcon classname={h.header__back} /> : <img src="/static/logo.svg" height="35" width="51.48" alt="logo" /> }
 							</a>
 						</Link>
 						<ul className={Class(g.dFlex, g.aiCenter, g.pRelative, h.header__items)}>

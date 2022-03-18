@@ -6,6 +6,10 @@
 		bottom: 0;
 		top: auto;
 	}
+	&__back {
+		fill: var(--theme-dark);
+		transition: fill .2s linear;
+	}
 	&__inner {
 		background-color: var(--header);
 		box-shadow: 0 2px 10px rgba(0, 0, 0, .2);

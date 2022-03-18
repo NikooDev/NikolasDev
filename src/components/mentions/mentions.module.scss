@@ -2,18 +2,25 @@
 
 .legal {
 	margin-top: 8rem;
-	@include mobile {
+	@include tablet {
 		margin-top: 1.2rem;
 	}
 	&__back {
+		display: none;
 		& svg {
-			transition: fill .2s linear;
 			fill: var(--theme-dark);
+			transition: fill .2s linear;
+		}
+		@include tablet {
+			display: flex;
 		}
 	}
 	&__title {
 		font-size: 1.4rem;
 		text-transform: uppercase;
+		@include mobile {
+			font-size: 1.1rem;
+		}
 	}
 	&__card {
 		background-color: var(--theme-light);
